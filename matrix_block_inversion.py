@@ -1,6 +1,5 @@
 import numpy as np
 
-
 def matrix_block_inversion(Ainv,B,C,D):
     '''
     This function performs the inverted of a matrix X, defined by blocks as:
