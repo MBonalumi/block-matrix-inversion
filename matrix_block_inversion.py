@@ -21,9 +21,9 @@ def matrix_block_inversion(Ainv,B,C,D):
                 [     -S'CA'         S'    ]
     
     The advantage is that only the inverse of A and S are required.
-    This come in handy when A' is already known.
+    This is convenient when A' is already known.
 
-    For example when expanding the kernel matrix in Gaussian Processes Tenciques.
+    For example when expanding the kernel matrix in Gaussian Processes techniques.
     (see https://github.com/MBonalumi/Batch-Incremental-Gaussian-Process-Regression-BIGPR)
     '''
 
@@ -66,11 +66,8 @@ def matrix_block_inversion_D(A,B,C,Dinv):
             X'= [      S'        -S'BD'     ]
                 [   -D'CS'     D'+D'CS'BD'  ]
     
-    The advantage is that only the inverse of A and S are required.
-    This come in handy when A' is already known.
-
-    For example when expanding the kernel matrix in Gaussian Processes Tenciques.
-    (see https://github.com/MBonalumi/Batch-Incremental-Gaussian-Process-Regression-BIGPR)
+    The advantage is that only the inverse of D and S are required.
+    This is convenient when D' is already known.
     '''
 
     assert A.shape[0] == A.shape[1]
