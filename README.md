@@ -42,5 +42,16 @@ If, instead, you want to use $D$ and $S_D$, the inverse of $X$ will be:
 The advantage is that only the inverse of $A$ and $S$ are required.
 This is convenient when $A^{-1}$ is already known.
 
+
+---
+
+It is also provided a script to compute the inverse of a block matrix upon removal of multiple rows and columns of arbitrary indices.
+
+
+The function conveniently inverts the indices of rows and columns to have in B, C, D the submatrices to be removed.
+Then computes the inverse of A as the schur complement of D, as it's pictured in the above matrix, where $X^{-1}$ is computed from $D^{-1}$ and $S_D^{-1}$. 
+
+---
+
 An example is when expanding the kernel matrix in Gaussian Processes techniques.
 (see https://github.com/MBonalumi/Batch-Incremental-Gaussian-Process-Regression-BIGPR)
